@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Covid-19</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="img/logo1.png" type="image/gif" sizes="16x16" />
+  </head>
+  <body>
+    <div class="left-sidebar">
+      <nav>
+        <ul>
+          <a class="a-link" href="#"
+            ><img class="logo" src="img/logo.png" alt=""
+          /></a>
+
+          <a
+            class="a-link active tablinks"
+            onclick="openTab(event, 'home')"
+            id="home-link"
+            href="#"
+          >
+            <img src="img/home.png" alt="" id="home-img" /> Overview</a
+          >
+
+          <a class="a-link tablinks" href="#" onclick="openTab(event, 'test')">
+            <img src="img/chemical.png" alt="" /> Test yourself</a
+          >
+
+          <!-- <a class="a-link tablinks" href="#" onclick="openTab(event, 'symptoms')">
+        <img src="img/cough.png" alt=""> Symptoms</a> -->
+
+          <a class="a-link tablinks" href="#" onclick="openTab(event, 'news')">
+            <img src="img/news.png" alt="" /> News</a
+          >
+
+          <a class="a-link tablinks" href="#" onclick="openTab(event, 'map')">
+            <img src="img/map.png" alt="" /> Map</a
+          >
+        </ul>
+      </nav>
+    </div>
+    <!-- home section -->
+    <section class="home-section tabcontent" id="home" style="display: block">
+      <div class="home-container">
+        <div class="heading">
+          <h1>Covid-19 Stats</h1>
+        </div>
+        <div class="covid-stats-container">
+          <div class="card-list">
+            <div class="card red">
+              <p>Infected</p>
+              <p class="global_cases"></p>
+              <img src="img/biohazard.png" alt="" />
+            </div>
+            <div class="card yellow">
+              <p>Active</p>
+              <p class="global_active"></p>
+              <img src="img/virus.png" alt="" />
+            </div>
+            <div class="card gray">
+              <p>Death</p>
+              <p class="global_deaths"></p>
+              <img src="img/skull.png" alt="" />
+            </div>
+            <div class="card green">
+              <p>Recovered</p>
+              <p class="global_recovered"></p>
+              <img src="img/add.png" alt="" />
+            </div>
+            <div class="card voilet">
+              <p>Countries</p>
+              <p class="global_country"></p>
+              <img src="img/flag.png" alt="" />
+            </div>
+          </div>
+        </div>
+        <div class="right-card">
+          <div class="right-home-card">
+            <img src="img/avatar.png" alt="" class="right-img1" />
+            <img src="img/logo1.png" alt="" class="right-img2" />
+            <div class="two-item">
+              <h1>Quick tips</h1>
+              <p>&#10140;</p>
+            </div>
+            <p>Mask is better than Ventilator</p>
+          </div>
+        </div>
+        <div class="chart-container">
+          <div class="two-col">
+            <div class="select-country">
+              <input
+                type="text"
+                class="search"
+                placeholder="Search Country"
+                id="search-input"
+                autocomplete="off"
+              />
+              <div class="country-list"></div>
+            </div>
+            <div class="chart">
+              <div class="stats-card-list">
+                <div class="stats-card">
+                  <h3 class="country-name">India</h3>
+                  <img
+                    src="https://disease.sh/assets/img/flags/in.png"
+                    alt="flag"
+                    class="flag"
+                  />
+                </div>
+                <div class="stats-card country-cases">
+                  <h3 class="infected">Infected</h3>
+                  <div class="two-item">
+                    <p class="value"></p>
+                    <span class="new-cases infected"></span>
+                  </div>
+                </div>
+                <div class="stats-card country-active">
+                  <h3 class="active1">Active</h3>
+                  <div class="two-item">
+                    <p class="value"></p>
+                    <span class="new-active active1"></span>
+                  </div>
+                </div>
+                <div class="stats-card country-deaths">
+                  <h3 class="death">Death</h3>
+                  <div class="two-item">
+                    <p class="value"></p>
+                    <span class="new-deaths death"></span>
+                  </div>
+                </div>
+                <div class="stats-card country-recovered">
+                  <h3 class="recovered">Recovered</h3>
+                  <div class="two-item">
+                    <p class="value"></p>
+                    <span class="new-recovered recovered"></span>
+                  </div>
+                </div>
+              </div>
+              <div class="my-chart">
+                <canvas id="axes_line_chart"> </canvas>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="right-card">
+          <div class="right-home-card-2">
+            <div class="card-head">
+              <img src="img/who_logo.png" alt="" />
+              <p>Important</p>
+              <p>link</p>
+            </div>
+
+            <div class="card-body">
+              <img src="img/covid19-2.jpg" alt="" />
+              <div class="body-detail">
+                <h2>
+                  <a
+                    href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019/technical-guidance"
+                    target="_blank"
+                    >Country and technical guidance for COVID-19</a
+                  >
+                </h2>
+                <p>Find latest WHO recommendation and</p>
+              </div>
+            </div>
+          </div>
+          <div class="right-home-card-2">
+            <div class="card-head">
+              <img src="img/who_logo.png" alt="" />
+              <p>Important</p>
+              <p>link</p>
+            </div>
+
+            <div class="card-body">
+              <img src="img/covid_t.jpg" alt="" />
+              <div class="body-detail">
+                <h2>
+                  <a
+                    href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019/training/online-training"
+                    target="_blank"
+                    >(COVID-19) training: Online training</a
+                  >
+                </h2>
+                <p>Find latest WHO recommendation and</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- test section -->
+    <section class="test-section tabcontent" id="test" style="display: none">
+      <div class="test-container">
+        <div class="test-div">
+          <div class="title">symptoms test</div>
+          <div id="question" class="question"></div>
+          <label class="option">
+            <input type="radio" name="option" value="1" />
+            <span class="option1"></span>
+          </label>
+          <label class="option">
+            <input type="radio" name="option" value="2" />
+            <span class="option2"></span>
+          </label>
+          <label class="option option_3">
+            <input type="radio" name="option" value="3" />
+            <span class="option3"></span>
+          </label>
+          <label class="option option_4">
+            <input type="radio" name="option" value="4" />
+            <span class="option4"></span>
+          </label>
+          <!-- Buttons -->
+          <div class="controls">
+            <button class="previous">Previous</button>
+            <button class="next">Next</button>
+          </div>
+        </div>
+        <div class="result-container" style="display: none">
+          <div class="result"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- news section -->
+
+    <section class="news-section tabcontent" id="news" style="display: none">
+      <div class="grid-container">
+        <div class="heading">
+          <h1>Covid-19 News</h1>
+        </div>
+        <div class="news-container" id="posts">
+          <template id="post-template">
+            <div class="news-card">
+              <img src="..." alt="news-img" class="post_img" />
+              <h4 class="post_title"></h4>
+              <p class="post_body"></p>
+              <p class="post_date"></p>
+            </div>
+          </template>
+        </div>
+      </div>
+    </section>
+
+    <!-- map section -->
+    <section class="map-section tabcontent" id="map" style="display: none">
+      <div class="map-container">
+        <!-- <iframe style="width:100%; height: 100%;"; src="https://coronavirus.app/map?embed=true" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>  -->
+      </div>
+    </section>
+
+    <!-- javascript -->
+    <script src="http://www.geoplugin.net/javascript.gp"></script>
+
+    <script src="js/countries.js"></script>
+    <script src="js/script.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"
+      integrity="sha256-R4pqcOYV8lt7snxMQO/HSbVCFRPMdrhAFMH+vr9giYI="
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/questions.js"></script>
+    <script src="js/symptoms.js"></script>
+  </body>
+</html>
