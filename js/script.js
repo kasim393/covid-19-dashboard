@@ -271,8 +271,6 @@ async function getData() {
       });
     });
 
-  // throw 'Get Data Error';
-  // console.log(posts);
 }
 
 //------------------------------------------------------------------//
@@ -293,18 +291,3 @@ function openTab(evt, tabname) {
   evt.currentTarget.className += " active";
 }
 
-//testing other api code
-// async function test(){
-//   await fetch("https://google-news.p.rapidapi.com/v1/search?q=covid&country=IN&lang=en", {
-//     "method": "GET",
-//     "headers": {
-//       "x-rapidapi-key": "dd5df5b7bemsh8fa3db287a4f66dp108728jsnf1b932ed572b",
-//       "x-rapidapi-host": "google-news.p.rapidapi.com"
-//     }
-//   })
-//   .then((res) =>  res.json())
-//      .then((data) => {
-//    console.log(data);
-//     });
-// }
-// test()
