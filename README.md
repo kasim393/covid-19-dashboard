@@ -1,5 +1,5 @@
 # covid-19-dashboard
-Tracking the impact of COVID-19 , Symptoms checker, Covid News , Map view.
+Tracking the impact of COVID-19, Graph, Symptoms checker, Covid News , Map view.
 
 ![Sreenshot](https://i.ibb.co/FwHz0Mj/Screenshot-1.png)
 
@@ -9,8 +9,8 @@ Tracking the impact of COVID-19 , Symptoms checker, Covid News , Map view.
 ### Minimum Resolution
 1280 x 860
 
-### Live demo
-coming soon
+## Live Demo
+[Demo](https://kasim393.github.io/covid-19-dashboard/)
 
 ### Built With
 - [HTML]
