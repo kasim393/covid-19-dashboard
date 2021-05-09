@@ -39,14 +39,11 @@ let global_list = [],
   formatedDates = [],
   flag_list = [];
 
-// get user country code
-let country_code = geoplugin_countryCode();
+
 
 var user_country;
 country_list.forEach((country) => {
-  if (country.code == country_code) {
     user_country = country.name;
-  }
 });
 
 function fetchData(country) {
