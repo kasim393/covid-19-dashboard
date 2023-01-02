@@ -39,11 +39,9 @@ let global_list = [],
   formatedDates = [],
   flag_list = [];
 
-
-
 var user_country;
 country_list.forEach((country) => {
-    user_country = country.name;
+  user_country = country.name;
 });
 
 function fetchData(country) {
@@ -62,7 +60,7 @@ function fetchData(country) {
 
   const api_fetch = async (country) => {
     //globally data fetch
-    await fetch("https://corona.lmao.ninja/v2/all")
+    await fetch("https://disease.sh/v3/covid-19/all")
       .then((res) => res.json())
       .then((data) => {
         //console.log(data);
@@ -74,7 +72,7 @@ function fetchData(country) {
       });
 
     //country data fetch
-    await fetch("https://corona.lmao.ninja/v2/countries/" + country)
+    await fetch("https://disease.sh/v3/covid-19/countries/" + country)
       .then((res) => res.json())
       .then((data) => {
         //console.log(data);
@@ -90,7 +88,7 @@ function fetchData(country) {
       });
 
     // total number of infected country
-    await fetch("https://corona.lmao.ninja/v2/countries/")
+    await fetch("https://disease.sh/v3/covid-19/countries/")
       .then((res) => res.json())
       .then((data) => {
         total_country = data.length;
@@ -270,7 +268,6 @@ async function getData() {
         }
       });
     });
-
 }
 
 //------------------------------------------------------------------//
@@ -290,4 +287,3 @@ function openTab(evt, tabname) {
   document.getElementById(tabname).style.display = "block";
   evt.currentTarget.className += " active";
 }
-
